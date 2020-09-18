@@ -1,0 +1,20 @@
+# ┌───────────── minute (0 - 59)
+# │ ┌───────────── hour (0 - 23)
+# │ │ ┌───────────── day of month (1 - 31)
+# │ │ │ ┌───────────── month (1 - 12)
+# │ │ │ │ ┌───────────── day of week (0 - 6) (Sunday to Saturday;
+# │ │ │ │ │                7 is also Sunday on some systems)
+# │ │ │ │ │
+# │ │ │ │ │
+# * * * * *  command_to_execute
+
+
+# Rsyncs the following folders to "backup_folder"
+# run immediately in terminal: copy command below with "time" in front to execution length 
+0 11 * * * rsync -zarv ../2nd_brain/second_brain_obsidian ../Projects ../Documents ../google_drive ../Pictures ../Music ~/backup_files
+
+# Testing: sync "backup_folder" with Google Drive using google-drive.sh
+# run immediately in terminal: ./google_drive.sh
+30 11 * * * ~/Documents/system_configurations/google_drive.sh
+
+
